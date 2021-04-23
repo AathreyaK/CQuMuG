@@ -101,7 +101,7 @@ void Observer::move(double amt, int direction)
 		break;
 	case CQUMUG_FOREWARD:
 		glm::vec3 directionUnitVec = (m_direction / glm::length(m_direction));
-		m_pos += glm::vec3(-directionUnitVec.x * amt, -directionUnitVec.y * amt, -directionUnitVec.z * amt);
+		m_pos += glm::vec3(directionUnitVec.x * amt, directionUnitVec.y * amt, directionUnitVec.z * amt);
 		break;
 	case CQUMUG_BACKWARD:
 		this->move(-1 * amt, CQUMUG_FOREWARD);
